@@ -91,7 +91,7 @@ class TaskController extends Controller
                 'status' => true,
                 'msg' => 'task category changed',
                 'errors' => false,
-                'data' => $task 
+                'data' => Task::find($task->id)
             ], 201);
         }
 
@@ -107,7 +107,7 @@ class TaskController extends Controller
                 'status' => true,
                 'msg' => 'task completed',
                 'errors' => false,
-                'data' => $task 
+                'data' => Task::find($task->id)
             ], 201);
         }   
        
@@ -122,7 +122,7 @@ class TaskController extends Controller
                 'status' => true,
                 'msg' => 'task is open',
                 'errors' => false,
-                'data' => $task 
+                'data' => Task::find($task->id)
             ], 201);
         }   
        
@@ -138,7 +138,7 @@ class TaskController extends Controller
                 'status' => true,
                 'msg' => 'task is hold',
                 'errors' => false,
-                'data' => $task 
+                'data' => Task::find($task->id)
             ], 201);
         }   
        
@@ -154,7 +154,7 @@ class TaskController extends Controller
                 'status' => true,
                 'msg' => 'task in ideas mode',
                 'errors' => false,
-                'data' => $task 
+                'data' => Task::find($task->id)
             ], 201);
         }   
        
@@ -170,7 +170,7 @@ class TaskController extends Controller
                 'status' => true,
                 'msg' => 'task cancelled',
                 'errors' => false,
-                'data' => $task 
+                'data' => Task::find($task->id)
             ], 201);
         }   
        
@@ -186,7 +186,7 @@ class TaskController extends Controller
                 'status' => true,
                 'msg' => 'task completed',
                 'errors' => false,
-                'data' => $task 
+                'data' => Task::find($task->id)
             ], 201);
         }   
        
@@ -202,7 +202,7 @@ class TaskController extends Controller
             'status' => true,
             'msg' => 'task important marked',
             'errors' => false,
-            'data' => $task 
+            'data' =>Task::find($task->id)
         ], 201);
     }
     }
@@ -217,7 +217,7 @@ class TaskController extends Controller
             'status' => true,
             'msg' => 'task unimportant marked',
             'errors' => false,
-            'data' => $task 
+            'data' => Task::find($task->id)
         ], 201);
     }
     }
